@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Interest Calculator</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="top">
+
+            <h1>
+                <i class="fa-solid fa-money-bill-trend-up"></i>
+                Smart Interest Calculator
+            </h1>
+
+            <button id="themeBtn">
+                🌙
+            </button>
+
+        </div>
+
+        <p class="subtitle">
+            Calculate Simple & Compound Interest instantly.
+        </p>
+
+        <!-- Calculator Type -->
+
+        <div class="calculator-type">
+
+            <label>
+                <input type="radio"
+                name="type"
+                value="simple"
+                checked>
+
+                Simple Interest
+            </label>
+
+            <label>
+                <input type="radio"
+                name="type"
+                value="compound">
+
+                Compound Interest
+            </label>
+
+        </div>
+
+        <!-- Inputs -->
+
+        <div class="input-group">
+
+            <label>Principal Amount (₹)</label>
+
+            <input
+            type="number"
+            id="principal"
+            placeholder="Enter Principal Amount">
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Annual Interest Rate (%)</label>
+
+            <input
+            type="number"
+            id="rate"
+            placeholder="Enter Rate">
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Time (Years)</label>
+
+            <input
+            type="number"
+            id="time"
+            placeholder="Enter Time">
+
+        </div>
+
+        <!-- Compound Frequency -->
+
+        <div
+        class="input-group"
+        id="frequencyBox">
+
+            <label>Compound Frequency</label>
+
+            <select id="frequency">
+
+                <option value="1">Yearly</option>
+
+                <option value="2">Half-Yearly</option>
+
+                <option value="4">Quarterly</option>
+
+                <option value="12">Monthly</option>
+
+            </select>
+
+        </div>
+
+        <!-- Buttons -->
+
+        <div class="buttons">
+
+            <button
+            id="calculateBtn"
+            class="calculate">
+
+                Calculate
+
+            </button>
+
+            <button
+            id="resetBtn"
+            class="reset">
+
+                Reset
+
+            </button>
+
+            <button
+            id="copyBtn"
+            class="copy">
+
+                Copy Result
+
+            </button>
+
+        </div>
+
+        <!-- Formula -->
+
+        <div class="formula">
+
+            <h3>Formula</h3>
+
+            <p id="formulaText">
+
+                SI = (P × R × T) / 100
+
+            </p>
+
+        </div>
+
+        <!-- Result -->
+
+        <div class="result">
+
+            <h2>Result</h2>
+
+            <p>
+
+                Interest :
+                <span id="interest">
+                    ₹0
+                </span>
+
+            </p>
+
+            <p>
+
+                Total Amount :
+                <span id="total">
+                    ₹0
+                </span>
+
+            </p>
+
+        </div>
+
+        <!-- History -->
+
+        <div class="history">
+
+            <div class="history-top">
+
+                <h2>
+                    Calculation History
+                </h2>
+
+                <button
+                id="clearHistory">
+
+                    Clear
+
+                </button>
+
+            </div>
+
+            <ul id="historyList">
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
